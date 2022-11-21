@@ -1,0 +1,153 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA2E48E1-5BD6-4F09-A095-538039481E02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebFormRail</RootNamespace>
+    <AssemblyName>WebFormRail</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/WebFormRails/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\AjaxHelper.cs" />
+    <Compile Include="Ajax\JSONSerializer.cs" />
+    <Compile Include="Attributes\AjaxAttribute.cs" />
+    <Compile Include="Attributes\GetParameterAttribute.cs" />
+    <Compile Include="Attributes\LayoutAttribute.cs" />
+    <Compile Include="Attributes\PostParameterAttribute.cs" />
+    <Compile Include="Attributes\SetupAttribute.cs" />
+    <Compile Include="Attributes\TeardownAttribute.cs" />
+    <Compile Include="Attributes\UrlAttribute.cs" />
+    <Compile Include="Attributes\ViewAttribute.cs" />
+    <Compile Include="ClientData\ClientDataCollection.cs" />
+    <Compile Include="Exceptions\WebFormRailsException.cs" />
+    <Compile Include="Exceptions\RedirectPageException.cs" />
+    <Compile Include="Exceptions\TemplateNotFoundException.cs" />
+    <Compile Include="HttpContext\Offline\OfflineHttpContext.cs" />
+    <Compile Include="HttpContext\Offline\OfflineHttpRequest.cs" />
+    <Compile Include="HttpContext\Offline\OfflineHttpResponse.cs" />
+    <Compile Include="HttpContext\Offline\OfflineHttpServerUtility.cs" />
+    <Compile Include="HttpContext\Offline\OfflineHttpSessionState.cs" />
+    <Compile Include="HttpContext\Online\OnlineHttpContext.cs" />
+    <Compile Include="HttpContext\Online\OnlineHttpRequest.cs" />
+    <Compile Include="HttpContext\Online\OnlineHttpResponse.cs" />
+    <Compile Include="HttpContext\Online\OnlineHttpServerUtility.cs" />
+    <Compile Include="HttpContext\Online\OnlineHttpSessionState.cs" />
+    <Compile Include="HttpContext\WebFormRailsHttpContext.cs" />
+    <Compile Include="HttpContext\WebFormRailsHttpRequest.cs" />
+    <Compile Include="HttpContext\WebFormRailsHttpResponse.cs" />
+    <Compile Include="HttpContext\WebFormRailsHttpServerUtility.cs" />
+    <Compile Include="HttpContext\WebFormRailsHttpSessionState.cs" />
+    <Compile Include="HttpHandlers\WebFormRailsHandler.cs" />
+    <Compile Include="HttpModules\CleanViewStatePersisterModule.cs" />
+    <Compile Include="HttpModules\HttpModule.cs" />
+    <Compile Include="PageController\WebFormControl.cs" />
+    <Compile Include="PageController\WebFormController.cs" />
+    <Compile Include="PageController\WebFormControllerClass.cs" />
+    <Compile Include="Plugins\AjaxProviders\ExtJsAjaxProvider.cs" />
+    <Compile Include="Plugins\AjaxProviders\JQueryAjaxProvider.cs" />
+    <Compile Include="Plugins\AjaxProviders\MootoolsAjaxProvider.cs" />
+    <Compile Include="Plugins\Interfaces\IAjaxProvider.cs" />
+    <Compile Include="Plugins\Interfaces\ICustomObjectCreator.cs" />
+    <Compile Include="Plugins\Interfaces\ILoggingProvider.cs" />
+    <Compile Include="Plugins\Interfaces\ISessionDataProvider.cs" />
+    <Compile Include="Plugins\Interfaces\ITemplateResolver.cs" />
+    <Compile Include="Plugins\Interfaces\ITranslationProvider.cs" />
+    <Compile Include="Plugins\MinimalSessionDataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionManagement\SessionBase.cs" />
+    <Compile Include="SessionManagement\SessionManager.cs" />
+    <Compile Include="SessionManagement\SessionProperty.cs" />
+    <Compile Include="UnitTesting\OfflineWebSession.cs" />
+    <Compile Include="Utility\ClassHelper.cs" />
+    <Compile Include="Utility\ControllerActionCollection.cs" />
+    <Compile Include="Utility\StreamPageStatePersister.cs" />
+    <Compile Include="Utility\WebFormRailsUtil.cs" />
+    <Compile Include="Utility\Url.cs" />
+    <Compile Include="Utility\UrlParameterCollection.cs" />
+    <Compile Include="ViewEngine\HtmlHelper.cs" />
+    <Compile Include="ViewEngine\Table.cs" />
+    <Compile Include="ViewEngine\WebFormView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEngine\WebFormViewData.cs" />
+    <Compile Include="WebApp\WebAppConfig.cs" />
+    <Compile Include="WebApp\WebAppContext.cs" />
+    <Compile Include="WebApp\WebAppHelper.cs" />
+    <Compile Include="Utility\WikiFormatter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ajax\JSON\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

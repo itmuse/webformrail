@@ -1,0 +1,5 @@
+bin\Debug\WebFormRails.dll
+bin\Debug\WebFormRails.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WebFormRails.dll
+obj\Debug\WebFormRails.pdb

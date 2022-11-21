@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="PageHead" runat="server">
+	<title>WebFormRail</title>
+	<!--[if IE]><link href="ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+	<meta http-equiv="Content-Type" content="text/xhtml; CHARSET=UTF-8" />
+	<meta name="description" content="Site description goes here" />
+	<meta name="keywords" content="Keywords go here" />
+</head>
+<body>
+    <link href="/WebFormRailDemo/Styles/Default/style.css" rel="stylesheet" type="text/css" />
+	<form id="form1" runat="server">
+		<div class="Fade">
+		</div>
+		<div class="Wrapper">
+			<div class="Header">
+				<div class="HeaderLeft">
+					<h1>WebFormRail</h1>
+				</div>
+				<div class="HeaderRight">
+					WebFormRail Central
+				</div>
+				<div style="clear: both;">
+				</div>
+			</div>
+			<div class="Menu">
+				<ul>
+					<li><a id="A1" href="~/Default.aspx" runat="server">Home</a></li>
+					<!--<li><a href="~/MyProjects.aspx" runat="server">My Projects</a></li>-->
+					<li><a id="A2" href="~/UseViewData.aspx" runat="server">ViewData示例</a></li>
+					<li><a id="A3" href="~/UseWebControl.aspx" runat="server">WEB控件示例</a></li>
+					<li><a id="A4" href="~/UseRouteLink.aspx" runat="server">RouteLink示例</a></li>
+				</ul>
+				<div style="clear: both;">
+				</div>
+			</div>
+
+			<div class="Content">
+				<asp:ContentPlaceHolder ID="cphFull" runat="server">
+				</asp:ContentPlaceHolder>
+				<div class="ContentLeft">
+					<asp:ContentPlaceHolder ID="cphLeft" runat="server">
+					</asp:ContentPlaceHolder>
+				</div>
+				<div class="ContentRight">
+					<asp:ContentPlaceHolder ID="cphRight" runat="server">
+					</asp:ContentPlaceHolder>
+					<br/><br />
+				</div>
+				<div style="clear: both;">
+				</div>
+			</div>
+		</div>
+		<div class="FooterWrapper">
+			<div class="Footer">
+				<div style="text-align: center">
+					Copyright &copy; 2008 WebFormRail Project. All rights reserved.
+				</div>
+				<div style="clear: both;">
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
